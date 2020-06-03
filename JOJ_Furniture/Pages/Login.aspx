@@ -11,6 +11,8 @@
 </head>
 <body>
 
+    <form id="form1" runat="server">
+
     <ul id="Header">
         <li class="Header"><a href="Home.aspx" class="HeaderListEntry">Home</a></li>
         <li class="Header"><a href="Login.aspx" class="HeaderListEntry">Login</a></li>
@@ -29,6 +31,19 @@
         <li class="Header"><a href="Login.aspx" class="HeaderListEntry">Login</a></li>
         <li class="Header"><a href="CreateAccount.aspx" class="HeaderListEntry">Create Account</a></li>
     </ul>
+
+        <br />
+        <br />
+        <br />
+        Email Address:
+        <asp:TextBox ID="EmailAddressTextBox" runat="server"></asp:TextBox>
+        <br />
+        Password:
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        Don&#39;t have account?<br />
+        Click Here to create an account today!</form>
 
 </body>
 </html>
