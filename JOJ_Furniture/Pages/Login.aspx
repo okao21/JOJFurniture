@@ -42,6 +42,7 @@
         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
         <br />
         <br />
+        <asp:Button ID="Loginbtn" runat="server" Text="Login" /><br />
         Don&#39;t have account?<br />
         Click Here to create an account today!</form>
 
