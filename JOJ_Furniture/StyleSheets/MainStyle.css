@@ -26,28 +26,24 @@ img {
 }
 
 #ImageContainer {
-    display: inline-block;
     width: 750px;
     height: 500px;
     border: 2px solid black;
-    grid-column-start: 1;
-    grid-column-end: 1;
     grid-row-start: 1;
     grid-row-end: 3;
 }
 
 #News {
-    display: inline-block;
     width: 300px;
     height: 200px;
     border: 2px solid black;
     grid-column-start: 2;
     grid-column-end: 2;
-    text-align:center;
+
+    text-align: center;
 }
 
 #Locations {
-    display: inline-block;
     width: 300px;
     height: 200px;
     border: 2px solid black;
