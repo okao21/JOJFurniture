@@ -69,10 +69,12 @@
   <ItemGroup>
     <Content Include="Images\MainPageImage.jpg" />
     <Content Include="Images\Map.JPG" />
+    <Content Include="Images\member.png" />
     <Content Include="Pages\Home.aspx" />
     <Content Include="Pages\Login.aspx" />
     <Content Include="Pages\CreateAccount.aspx" />
     <Content Include="Scripts\MainFunctions.js" />
+    <Content Include="StyleSheets\LoginPage.css" />
     <Content Include="StyleSheets\MainStyle.css" />
     <Content Include="Web.config" />
   </ItemGroup>

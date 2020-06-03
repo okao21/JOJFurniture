@@ -1,0 +1,12 @@
+﻿#LoginBox {
+    max-width: 300px;
+    margin: auto;
+    border:solid;
+    padding: 70px;
+}
+
+#memberIcon {
+    zoom:15%;
+    padding-bottom:10em;
+    
+}
