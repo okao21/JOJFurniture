@@ -49,14 +49,22 @@ img {
     border: 2px solid black;
     grid-column-start: 2;
     grid-column-end: 2;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../Images/Map.JPG');
 }
 
 
 
 
-/*These next four handle the CSS for the Header and Footer Menus*/
+/*These next seven entries handle the CSS for the Header and Footer Menus*/
 li.Header {
     float: left;
+}
+
+li.Header2 {
+    float: right;
 }
 
 li a.HeaderListEntry {
@@ -67,6 +75,7 @@ li a.HeaderListEntry {
   text-decoration: none;
 }
 
+
 ul#Header {
     list-style-type: none;
     margin: 10;
@@ -76,7 +85,19 @@ ul#Header {
     position: absolute;
     left:0;
     top:0;
-    width: 100%;
+    width: 60%;
+}
+
+ul#Header2 {
+    list-style-type: none;
+    margin: 10;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkslategray;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60%;
 }
 
 ul#Footer {
@@ -87,5 +108,16 @@ ul#Footer {
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: 60%;
+}
+
+ul#FooterRight {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: darkslategray;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 60%;
 }

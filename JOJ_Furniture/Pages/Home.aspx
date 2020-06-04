@@ -16,15 +16,19 @@
         <li class="Header"><a href="Login.aspx" class="HeaderListEntry">Login</a></li>
         <li class="Header"><a href="CreateAccount.aspx" class="HeaderListEntry">Create Account</a></li>
     </ul>
+    <ul id="Header2">
+        <li class="Header2"><a href="Login.aspx" class="HeaderListEntry">Login</a></li>
+    </ul>
+
 
     <h1 id="intro">Welcome to JOJ Furniture! We've got everything ready for you...</h1>
 
     <div class="grid-container">
-        <!--<a href="Login.html">-->
         <div id="ImageContainer">
+            <a href="Login.aspx">
             <img alt="Main Splash" src="../Images/MainPageImage.jpg" />
+            </a>
         </div>
-        <!--</a>-->
         <div id="News">
             <h3>News from JOJ:</h3>
             <p>
@@ -35,7 +39,7 @@
             </p>
         </div>
         <div id="Locations">
-            <img alt="Our Map" src="../Images/Map.JPG" />
+            
         </div>
     </div>
 
@@ -49,6 +53,9 @@
         <li class="Header"><a href="Home.aspx" class="HeaderListEntry">Home</a></li>
         <li class="Header"><a href="Login.aspx" class="HeaderListEntry">Login</a></li>
         <li class="Header"><a href="CreateAccount.aspx" class="HeaderListEntry">Create Account</a></li>
+    </ul>
+        <ul id="FooterRight">
+        <li class="Header2"><a href="Login.aspx" class="HeaderListEntry">Login</a></li>
     </ul>
 
 
