@@ -74,6 +74,7 @@
     <Content Include="Pages\Login.aspx" />
     <Content Include="Pages\CreateAccount.aspx" />
     <Content Include="Scripts\MainFunctions.js" />
+    <Content Include="StyleSheets\CreateAccount.css" />
     <Content Include="StyleSheets\LoginPage.css" />
     <Content Include="StyleSheets\MainStyle.css" />
     <Content Include="Web.config" />
