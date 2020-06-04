@@ -25,16 +25,16 @@
         <img src="../Images/member.png" id="memberIcon"/>
         <br />
         Email Address:
-        <asp:TextBox ID="EmailAddressTextBox" runat="server"></asp:TextBox>
+        <asp:TextBox ID="emailAddressTextBox" runat="server"></asp:TextBox>
         <br />
         Password:
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:TextBox ID="passwordTextbox" runat="server" TextMode="Password"></asp:TextBox>
         <br />
         <br />
         <asp:Button ID="Loginbtn" runat="server" Text="Login" /><br />
         <br />
         Don&#39;t have account?<br />
-        Click Here to create an account today!
+        Click <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Pages/CreateAccount.aspx">Here</asp:HyperLink> to create an account today!
         
         </div>
 
