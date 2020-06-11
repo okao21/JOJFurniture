@@ -26,7 +26,10 @@
     <h1 id="intro">Please Login to your Account!</h1>
         <div id="LoginBox" style="text-align:center">
         <img src="../Images/member.png" id="memberIcon"/>
-            <div class="grid-container">
+                <div class ="errorMessages">
+                    <asp:Label ID ="errorMessages" runat="server" Text=""></asp:Label>
+                </div>
+                <div class="grid-container">
                 <p id="email">Email Address:</p>
                 <div id ="emailInput">
                     <asp:TextBox ID="emailAddressTextBox" runat="server"></asp:TextBox>
@@ -40,11 +43,10 @@
 
         <br />
         <br />
-        <asp:Button ID="Loginbtn" runat="server" Text="Login" /><br />
+        <asp:Button ID="Loginbtn" runat="server" Text="Login" OnClick="userLogin"/><br />
         <br />
         Don&#39;t have account?<br />
         Click <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Pages/CreateAccount.aspx">Here</asp:HyperLink> to create an account today!
-        
         </div>
 
 
