@@ -19,64 +19,75 @@
         <li class="Header"><a href="Login.aspx" class="HeaderListEntry">Login</a></li>
         <li class="Header"><a href="CreateAccount.aspx" class="HeaderListEntry">Create Account</a></li>
     </ul>
+    <ul id="Header2">
+        <li class="Header2"><a href="Login.aspx" class="HeaderListEntry">Login</a></li>
+    </ul>
 
     <h1 id="intro">Please Create Your Account Here!</h1>
         <div id="RegistrationBox">
-        <br />
-        First Name :
-        <asp:TextBox ID="UserFirstName" runat="server" style="text-align:left"></asp:TextBox>
-        Last Name :
-        <asp:TextBox ID="UserLastName" runat="server" style="text-align:right"></asp:TextBox>
-        <br />
-            <br />
-        E-mail :
-        <asp:TextBox ID="UserEmail" runat="server"></asp:TextBox>
-        <br />
-            <br />
-        Password :
-        <asp:TextBox ID="UserPassword" runat="server"></asp:TextBox>
-        <br />
-            <br />
-        Confirm Password :
-        <asp:TextBox ID="UserConfirmPassword" runat="server"></asp:TextBox>
-            <br />
-        <br />
-                    Address :
-        <asp:DropDownList ID="Province" runat="server">
-            <asp:ListItem Enabled ="true" Text="Select Province" Value="1"></asp:ListItem>
-            <asp:ListItem Text="Alberta" Value="1"></asp:ListItem>
-            <asp:ListItem Text="British Columbia" Value="2"></asp:ListItem>
-            <asp:ListItem Text="Monitoba" Value="3"></asp:ListItem>
-            <asp:ListItem Text="New Brunswick" Value="4"></asp:ListItem>
-            <asp:ListItem Text="Newfoundland and Labrador" Value="5"></asp:ListItem>
-            <asp:ListItem Text="Northwest Territories" Value="6"></asp:ListItem>
-            <asp:ListItem Text="Nova Scotia" Value="7"></asp:ListItem>
-            <asp:ListItem Text="Nunavut" Value="8"></asp:ListItem>
-            <asp:ListItem Text="Ontario" Value="9"></asp:ListItem>
-            <asp:ListItem Text="Pricne Edward Island" Value="10"></asp:ListItem>
-            <asp:ListItem Text="Quebac" Value="11"></asp:ListItem>
-            <asp:ListItem Text="Saskachewan" Value="12"></asp:ListItem>
-            <asp:ListItem Text="Yukon" Value="13"></asp:ListItem>
-        </asp:DropDownList>
-            <br />
-        <asp:TextBox ID="UserAddress" runat="server" Text="Enter Address"></asp:TextBox>
-        
-        <asp:TextBox ID="PostalCode" runat="server" Text="Enter Postal Code"></asp:TextBox>
-            <br />
-            <br />
-        Phone Number :
-        <asp:TextBox ID="UserPhoneNumber" runat="server"></asp:TextBox>
-        <br />
-            <br />
+            <div class="grid-container">
+                <p class="column1">First Name:</p>
+                <div class="column2">
+                    <asp:TextBox ID="UserFirstName" runat="server" style="text-align:left"></asp:TextBox>
+                </div>
+                <p class="column3">Last Name:</p>
+                <div class="column4">
+                    <asp:TextBox ID="UserLastName" runat="server" style="text-align:left"></asp:TextBox>
+                </div>
+                <p class="column1">E-mail:</p>
+                <div class ="column2">
+                    <asp:TextBox ID="userEmailAddress" runat="server"></asp:TextBox>
+                </div>
+                <p class="column1">Password:</p>
+                <div class="column2">
+                    <asp:TextBox ID="userPassword" runat="server" TextMode="Password"></asp:TextBox>
+                </div>
+                <p class="column1">Confirm Password:</p>
+                <div class="column2">
+                    <asp:TextBox ID="UserConfirmPassword" runat="server" TextMode="Password"></asp:TextBox>
+                </div>
+                <p class="column1">Address:</p>
+                <div class="column2">
+                    <asp:DropDownList ID="DropDownList1" runat="server">
+                        <asp:ListItem Enabled ="true" Text="Select Province" Value="None"></asp:ListItem>
+                        <asp:ListItem Text="Alberta" Value="Alberta"></asp:ListItem>
+                        <asp:ListItem Text="British Columbia" Value="British Columbia"></asp:ListItem>
+                        <asp:ListItem Text="Manitoba" Value="Manitoba"></asp:ListItem>
+                        <asp:ListItem Text="New Brunswick" Value="New Brunswich"></asp:ListItem>
+                        <asp:ListItem Text="Newfoundland and Labrador" Value="Newfoundland and Labrador"></asp:ListItem>
+                        <asp:ListItem Text="Northwest Territories" Value="Northwest Territories"></asp:ListItem>
+                        <asp:ListItem Text="Nova Scotia" Value="Nova Scotia"></asp:ListItem>
+                        <asp:ListItem Text="Nunavut" Value="Nunavut"></asp:ListItem>
+                        <asp:ListItem Text="Ontario" Value="Ontario"></asp:ListItem>
+                        <asp:ListItem Text="Prince Edward Island" Value="Prince Edward Island"></asp:ListItem>
+                        <asp:ListItem Text="Quebec" Value="Quebec"></asp:ListItem>
+                        <asp:ListItem Text="Saskatchewan" Value="Saskatchewan"></asp:ListItem>
+                        <asp:ListItem Text="Yukon" Value="Yukon"></asp:ListItem>
+                    </asp:DropDownList>
+                </div>
+                <div class="column3">
+                    <asp:TextBox ID="UserAddress" runat="server" placeholder="Enter Address"></asp:TextBox>
+                </div>
+                <div class="column4">
+                    <asp:TextBox ID="UserPostalCode" runat="server" placeholder="Enter Postal Code" MaxLength="6"></asp:TextBox>
+                </div>
+                <p class="column1">Phone Number:</p>
+                <div class="column2">
+                    <asp:TextBox ID="UserPhoneNumber" runat="server" MaxLength="10"></asp:TextBox>
+                </div>
+            </div>
+
         <asp:CheckBox ID="AgreeToPolicy" runat="server" />
-        Agree to Policy*
+        Agree to Privacy Policy*
         <br />
         <asp:CheckBox ID="Notification" runat="server" />
-        Receive notifications via eamil
+        Receive notifications via email
         <br />
         <br />
-        <asp:Button ID="CreateAccount" runat="server" Text="Create Account!" style="text-align:center"/><br />
+        <asp:Button ID="CreateAccount" runat="server" Text="Create Account!" style="text-align:center" OnClick="btnCreateAccount"/><br />
         <br />
+
+        <asp:Label ID ="lblError" runat="server" Text=""></asp:Label>
         
         </div>
 
@@ -88,6 +99,9 @@
         <li class="Header"><a href="Home.aspx" class="HeaderListEntry">Home</a></li>
         <li class="Header"><a href="Login.aspx" class="HeaderListEntry">Login</a></li>
         <li class="Header"><a href="CreateAccount.aspx" class="HeaderListEntry">Create Account</a></li>
+    </ul>
+    <ul id="FooterRight">
+        <li class="Header2"><a href="Login.aspx" class="HeaderListEntry">Login</a></li>
     </ul>
 
     </form>
