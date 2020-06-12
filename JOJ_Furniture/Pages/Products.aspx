@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <title>JOJ Furniture</title>
-    <link rel="stylesheet" href="../StyleSheets/MainStyle.css"/>
+    <link rel="stylesheet" href="../StyleSheets/Products.css"/>
     <script src="../Scripts/MainFunctions.js"></script>
 </head>
 <body>
@@ -22,9 +22,23 @@
         <li class="Header2"><a href="Cart.aspx" class="HeaderListEntry">Cart</a></li>
     </ul>
 
-    <h1 id="intro">Here are our products!!</h1>
+    <h1 id="intro">What are you looking for today?</h1>
 
+    <div id="CouchContainer">
+            <p><strong>Looking for Couches?</strong></p>
+            <p><strong>Shop Now -></strong></p>
+            <a href="Couch.aspx">
+            <img alt="Couch Image" src="../Images/Couch.jpg" />
+            </a>
+        </div>
 
+        <div id="TableContainer">
+            <p><strong>Looking for Tables?</strong></p>
+            <p><strong>Shop Now -></strong></p>
+            <a href="Table.aspx">
+            <img alt="Table Image" src="../Images/Table.jpg" />
+            </a>
+        </div>
 
 
     <ul id="Footer">

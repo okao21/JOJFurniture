@@ -71,14 +71,19 @@
     <Content Include="Images\Map.JPG" />
     <Content Include="Images\member.png" />
     <Content Include="Pages\Cart.aspx" />
+    <Content Include="Pages\Couch.aspx" />
     <Content Include="Pages\Products.aspx" />
     <Content Include="Pages\Home.aspx" />
     <Content Include="Pages\Login.aspx" />
     <Content Include="Pages\CreateAccount.aspx" />
+    <Content Include="Pages\Table.aspx" />
     <Content Include="Scripts\MainFunctions.js" />
+    <Content Include="StyleSheets\Couch.css" />
     <Content Include="StyleSheets\CreateAccount.css" />
     <Content Include="StyleSheets\LoginPage.css" />
     <Content Include="StyleSheets\MainStyle.css" />
+    <Content Include="StyleSheets\Products.css" />
+    <Content Include="StyleSheets\Table.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -88,6 +93,13 @@
     </Compile>
     <Compile Include="Pages\Cart.aspx.designer.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Couch.aspx.cs">
+      <DependentUpon>Couch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Couch.aspx.designer.cs">
+      <DependentUpon>Couch.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Products.aspx.cs">
       <DependentUpon>Products.aspx</DependentUpon>
@@ -116,6 +128,13 @@
     </Compile>
     <Compile Include="Pages\CreateAccount.aspx.designer.cs">
       <DependentUpon>CreateAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Table.aspx.cs">
+      <DependentUpon>Table.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Table.aspx.designer.cs">
+      <DependentUpon>Table.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
