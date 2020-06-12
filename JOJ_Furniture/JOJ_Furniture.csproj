@@ -71,6 +71,7 @@
     <Content Include="Images\Map.JPG" />
     <Content Include="Images\member.png" />
     <Content Include="Pages\Cart.aspx" />
+    <Content Include="Pages\Confirm.aspx" />
     <Content Include="Pages\Couch.aspx" />
     <Content Include="Pages\Products.aspx" />
     <Content Include="Pages\Home.aspx" />
@@ -78,6 +79,7 @@
     <Content Include="Pages\CreateAccount.aspx" />
     <Content Include="Pages\Table.aspx" />
     <Content Include="Scripts\MainFunctions.js" />
+    <Content Include="StyleSheets\Cart.css" />
     <Content Include="StyleSheets\Couch.css" />
     <Content Include="StyleSheets\CreateAccount.css" />
     <Content Include="StyleSheets\LoginPage.css" />
@@ -93,6 +95,13 @@
     </Compile>
     <Compile Include="Pages\Cart.aspx.designer.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Confirm.aspx.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Confirm.aspx.designer.cs">
+      <DependentUpon>Confirm.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Couch.aspx.cs">
       <DependentUpon>Couch.aspx</DependentUpon>
@@ -140,6 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <Content Include="TestOrder\JOJOrdersDb.csv" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
