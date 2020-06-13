@@ -13,6 +13,10 @@ h3{
     text-align:center;
 }
 
+.errorMessages{
+    color:red;
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto;

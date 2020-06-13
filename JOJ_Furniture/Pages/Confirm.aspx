@@ -1,47 +1,34 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Products.aspx.cs" Inherits="JOJ_Furniture.Pages.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Confirm.aspx.cs" Inherits="JOJ_Furniture.Pages.Confirm" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <meta charset="utf-8" />
     <title>JOJ Furniture</title>
-    <link rel="stylesheet" href="../StyleSheets/Products.css"/>
+    <link rel="stylesheet" href="../StyleSheets/MainStyle.css"/>
     <script src="../Scripts/MainFunctions.js"></script>
 </head>
 <body>
-
-    <ul id="Header">
+    <form id="form1" runat="server">
+        <ul id="Header">
         <li class="Header"><a href="Home.aspx" class="HeaderListEntry">Home</a></li>
         <li class="Header"><a href="Login.aspx" class="HeaderListEntry">Login</a></li>
         <li class="Header"><a href="CreateAccount.aspx" class="HeaderListEntry">Create Account</a></li>
-        <li class="Header"><a href="Products.aspx" class="HeaderListEntry">Products</a></li>
     </ul>
     <ul id="Header2">
         <li class="Header2"><a href="Home.aspx" class="HeaderListEntry">Log Out</a></li>
         <li class="Header2"><a href="Cart.aspx" class="HeaderListEntry">Cart</a></li>
     </ul>
 
-    <h1 id="intro">What are you looking for today?</h1>
+        <h1 id="intro">Confirmation</h1>
+        <br />
+        <h2>We received your order. Your Order ID is:</h2>
 
-    <div id="CouchContainer">
-            <p><strong>Looking for Couches?</strong></p>
-            <p><strong>Shop Now -></strong></p>
-            <a href="Couch.aspx">
-            <img alt="Couch Image" src="../Images/Couch.jpg" />
-            </a>
-        </div>
-
-        <div id="TableContainer">
-            <p><strong>Looking for Tables?</strong></p>
-            <p><strong>Shop Now -></strong></p>
-            <a href="Table.aspx">
-            <img alt="Table Image" src="../Images/Table.jpg" />
-            </a>
-        </div>
+        <asp:Label ID="OrderidLbl" runat="server" Text="Label" Font-Size="X-Large" Font-Bold="true"></asp:Label>
 
 
-    <ul id="Footer">
+
+<ul id="Footer">
         <li class="Header"><a href="Home.aspx" class="HeaderListEntry">Home</a></li>
         <li class="Header"><a href="Login.aspx" class="HeaderListEntry">Login</a></li>
         <li class="Header"><a href="CreateAccount.aspx" class="HeaderListEntry">Create Account</a></li>
@@ -51,7 +38,6 @@
         <li class="Header2"><a href="Home.aspx" class="HeaderListEntry">Log Out</a></li>
         <li class="Header2"><a href="Cart.aspx" class="HeaderListEntry">Cart</a></li>
     </ul>
-
-
+    </form>
 </body>
 </html>

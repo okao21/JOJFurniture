@@ -1,0 +1,110 @@
+﻿body {
+    background-color: antiquewhite;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+h3 {
+    background-color: burlywood;
+}
+
+
+#intro {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.grid-container {
+    display: inline-flex;
+    padding: 10px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+#TableOne {
+    width: 500px;
+    height: 200px;
+    margin-left:200px;
+}
+
+#TableTwo {
+    width: 500px;
+    height: 200px;
+    margin: 50px;
+}
+
+#TableThree {
+    width: 500px;
+    height: 200px;
+    margin-right:200px;
+}
+
+
+
+
+/*These next seven entries handle the CSS for the Header and Footer Menus*/
+li.Header {
+    float: left;
+}
+
+li.Header2 {
+    float: right;
+}
+
+li a.HeaderListEntry {
+    display: block;
+    color: aliceblue;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+
+ul#Header {
+    list-style-type: none;
+    margin: 10;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkslategray;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60%;
+}
+
+ul#Header2 {
+    list-style-type: none;
+    margin: 10;
+    padding: 0;
+    overflow: hidden;
+    background-color: darkslategray;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 60%;
+}
+
+ul#Footer {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: darkslategray;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 60%;
+}
+
+ul#FooterRight {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: darkslategray;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 60%;
+}

@@ -42,22 +42,22 @@ namespace JOJ_Furniture.Pages
         protected global::System.Web.UI.WebControls.TextBox UserLastName;
 
         /// <summary>
-        /// TextBox1 control.
+        /// userEmailAddress control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+        protected global::System.Web.UI.WebControls.TextBox userEmailAddress;
 
         /// <summary>
-        /// TextBox2 control.
+        /// userPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.TextBox userPassword;
 
         /// <summary>
         /// UserConfirmPassword control.
@@ -87,13 +87,13 @@ namespace JOJ_Furniture.Pages
         protected global::System.Web.UI.WebControls.TextBox UserAddress;
 
         /// <summary>
-        /// PostalCode control.
+        /// UserPostalCode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox PostalCode;
+        protected global::System.Web.UI.WebControls.TextBox UserPostalCode;
 
         /// <summary>
         /// UserPhoneNumber control.
@@ -130,5 +130,14 @@ namespace JOJ_Furniture.Pages
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button CreateAccount;
+
+        /// <summary>
+        /// lblError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblError;
     }
 }
