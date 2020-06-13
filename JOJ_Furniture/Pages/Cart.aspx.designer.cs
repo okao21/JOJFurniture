@@ -11,7 +11,7 @@ namespace JOJ_Furniture.Pages
 {
 
 
-    public partial class WebForm1
+    public partial class WebForm10
     {
 
         /// <summary>
