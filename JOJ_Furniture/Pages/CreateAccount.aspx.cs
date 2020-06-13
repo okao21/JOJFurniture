@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.ComponentModel.DataAnnotations;
+using JOJ_Furniture.Classes;
 
 namespace JOJ_Furniture.Pages
 {
@@ -93,6 +94,10 @@ namespace JOJ_Furniture.Pages
 
                 //Then we write the string to our csv file
                 File.AppendAllText(dataFilePath, userData);
+
+                //And we add the data to the cookies we're going to use
+                logDataToCookie(new UserData(userEmailAddress.Text, userPassword.Text, UserFirstName.Text, UserLastName.Text, 
+                                            DropDownList1.SelectedValue, UserAddress.Text, UserPostalCode.Text, UserPhoneNumber.Text));
 
                 //Then we can navigate away
                 Response.Redirect("../Pages/Products.aspx");
@@ -231,6 +236,18 @@ namespace JOJ_Furniture.Pages
             //If both are true we return true, otherwise false.
             if (atSymbol == true && period == true) { return true; }
             else { return false; }
+        }
+
+        //This logs the correct user data to a cookie
+        protected void logDataToCookie(UserData userInfo)
+        {
+            Response.Cookies["email"].Value = userInfo.UserEmail;
+            Response.Cookies["firstName"].Value = userInfo.UserFirstName;
+            Response.Cookies["lastName"].Value = userInfo.UserLastName;
+            Response.Cookies["province"].Value = userInfo.UserProvince;
+            Response.Cookies["address"].Value = userInfo.UserAddress;
+            Response.Cookies["postalCode"].Value = userInfo.UserPostalCode;
+            Response.Cookies["phoneNumber"].Value = userInfo.UserPhoneNumber;
         }
     }
 }

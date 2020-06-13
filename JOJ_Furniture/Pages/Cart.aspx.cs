@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 
 namespace JOJ_Furniture.Pages
 {
-    public partial class WebForm1 : System.Web.UI.Page
+    public partial class WebForm10 : System.Web.UI.Page
     {
         String EmailAddress = "oswald.kao@student.vcc.ca";
 
@@ -129,6 +129,15 @@ namespace JOJ_Furniture.Pages
 
             GrandTotalLbl.Text = "Grand Total: $" + grandTotal;
             AfterTaxTotalLbl.Text = "Total(+TAX): $" + afterTaxTotal;
+        }
+
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            //First we check to see if the user is logged in by looking for a cookie with their email
+            if (Request.Cookies["email"] == null)
+            {
+                Response.Redirect("../Pages/Redirect.aspx");
+            }
         }
     }
 }

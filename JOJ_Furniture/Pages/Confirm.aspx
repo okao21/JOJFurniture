@@ -16,7 +16,7 @@
         <li class="Header"><a href="CreateAccount.aspx" class="HeaderListEntry">Create Account</a></li>
     </ul>
     <ul id="Header2">
-        <li class="Header2"><a href="Home.aspx" class="HeaderListEntry">Log Out</a></li>
+        <li class="Header2"><a href="LogOut.aspx" class="HeaderListEntry">Log Out</a></li>
         <li class="Header2"><a href="Cart.aspx" class="HeaderListEntry">Cart</a></li>
     </ul>
 
