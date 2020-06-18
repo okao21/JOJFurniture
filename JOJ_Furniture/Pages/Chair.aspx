@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Couch.aspx.cs" Inherits="JOJ_Furniture.Pages.Couch" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Chair.aspx.cs" Inherits="JOJ_Furniture.Pages.Chair" %>
 
 <!DOCTYPE html>
 
@@ -6,7 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>JOJ Furniture</title>
-    <link rel="stylesheet" href="../StyleSheets/Couch.css"/>
+    <link rel="stylesheet" href="../StyleSheets/Chair.css"/>
     <script src="../Scripts/MainFunctions.js"></script>
 </head>
 <body>
@@ -25,18 +25,18 @@
     </ul>
 
 
-    <h1 id="intro">Here are some Couches for you!</h1>
+    <h1 id="intro">Here are some Chairs for you!</h1>
 
         <div class="grid-container">
 
-        <div id="CouchOne">
-            <img alt="Green Couch Image" src="../Images/GreenSofa.jpg" />
-            <%-- source: https://www.article.com/pla/1366/cirrus-grass-green-sofa?artcl_campignID=857230301&artcl_network=g&artcl_adgroupid=43579941316&artcl_keyword=&artcl_source=google&gclid=Cj0KCQjwrIf3BRD1ARIsAMuugNtR1wIA7XyFeeNdPM-HN61GCEAfZOMxtxeD3pdWeRyO9Z3hfmh0phoaAo1WEALw_wcB  --%>
-            <p><strong>Green Sofa</strong></p>
-            <p><i>A cozy green sofa that will make feel </i></p>
-            <p><i>like you are lying under trees and nature.</i></p>
-            <p>Price: $550</p>
-            <asp:DropDownList ID="DropDownListGreenCouch" runat="server">
+        <div id="ChairOne">
+            <img alt="Modern Chair Image" src="../Images/ModernChair.jpg" />
+            <%-- source:  https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.westelm.ca%2Fsite%2FWE%2FProduct%2520Images%2Fmodern-petal-upholstered-dining-chair-h4007-hero-z.jpg%3Fresizeid%3D69%26resizeh%3D450%26resizew%3D450&imgrefurl=https%3A%2F%2Fwww.westelm.ca%2Fmodern-petal-upholstered-dining-chair-h4007&tbnid=P3T67YHVUDsVdM&vet=12ahUKEwjZobi2oozqAhVYhJ4KHW4gBZYQMygWegUIARC0Aw..i&docid=d8ByUGdRcgYRxM&w=450&h=450&q=chairs&safe=active&ved=2ahUKEwjZobi2oozqAhVYhJ4KHW4gBZYQMygWegUIARC0Aw --%>
+            <p><strong>Modern Chair</strong></p>
+            <p><i>The classic type of chair.</i></p>
+            <p><i>Fits best if you are looking for nit image.</i></p>
+            <p>Price: $150</p>
+            <asp:DropDownList ID="DropDownListModernChair" runat="server">
                         <asp:ListItem Enabled ="true" Text="0" Value="None"></asp:ListItem>
                         <asp:ListItem Text="1" Value="1"></asp:ListItem>
                         <asp:ListItem Text="2" Value="2"></asp:ListItem>
@@ -44,18 +44,18 @@
                         <asp:ListItem Text="4" Value="4"></asp:ListItem>
                         <asp:ListItem Text="5" Value="5"></asp:ListItem>
              </asp:DropDownList>
-            <asp:Button ID="AddtoCartGreenCouch" runat="server" Text="Add To Cart!" style="text-align:center" OnClick="addProductToCart"/>
+            <asp:Button ID="AddtoCartModernChair" runat="server" Text="Add To Cart!" style="text-align:center"/>
             
         </div>
 
-        <div id="CouchTwo">
-            <img alt="Gray Couch Image" src="../Images/GraySofa.jpg" />
-            <%-- source:  https://www.article.com/pla/2453/soma-dawn-gray-right-sofa-bed --%>
-            <p><strong>Gray Sofa</strong></p>
-            <p><i>A classic desgin sofa with gray color</i></p>
-            <p><i>will give you an eligant emotion.</i></p>
-            <p>Price: $500</p>
-            <asp:DropDownList ID="DropDownListGrayCouch" runat="server">
+        <div id="ChairTwo">
+            <img alt="Dark Gray Chair Image" src="../Images/DarkGrayChair.jpg" />
+            <%-- source: https://www.article.com/pla/1856/nord-meteorite-gray-chair?artcl_campignID=856688149&artcl_network=g&artcl_adgroupid=45183886004&artcl_keyword=&artcl_source=google&gclid=Cj0KCQjwoaz3BRDnARIsAF1RfLdPfQaTnwbMSRJ2ehNZSm2F_O6Tk7ExtqsYlisqYPn9qI5kfBMWcJYaAg-7EALw_wcB --%>
+            <p><strong>Dark Gray Chair</strong></p>
+            <p><i>Very comfortable chair with</i></p>
+            <p><i>Ergonomic Desgin for human body.</i></p>
+            <p>Price: $150</p>
+            <asp:DropDownList ID="DropDownListDarkGrayChair" runat="server">
                         <asp:ListItem Enabled ="true" Text="0" Value="None"></asp:ListItem>
                         <asp:ListItem Text="1" Value="1"></asp:ListItem>
                         <asp:ListItem Text="2" Value="2"></asp:ListItem>
@@ -63,18 +63,18 @@
                         <asp:ListItem Text="4" Value="4"></asp:ListItem>
                         <asp:ListItem Text="5" Value="5"></asp:ListItem>
              </asp:DropDownList>
-            <asp:Button ID="AddtoCartGrayCouch" runat="server" Text="Add To Cart!" style="text-align:center" OnClick="addProductToCart"/>
+            <asp:Button ID="AddtoCartDarkGrayChair" runat="server" Text="Add To Cart!" style="text-align:center"/>
                         
         </div>
 
-        <div id="CouchThree">
-            <img alt="Light Gray Couch Image" src="../Images/LightGraySofa.jpg" />
-            <%-- source: https://www.article.com/pla/1066/nova-winter-gray-sofa?artcl_campignID=857230301&artcl_network=g&artcl_adgroupid=43579941316&artcl_keyword=&artcl_source=google&gclid=Cj0KCQjwrIf3BRD1ARIsAMuugNuS38ZFvF95c5uzoy_yUY_zIGZcGLx11n59I7ON6X_lOC1mGNzYN1waApiHEALw_wcB  --%>
-            <p><strong>Light Gray Sofa</strong></p>
-            <p><i>A modern - styled light gray colored sofa</i></p>
-            <p><i>that will fit any type of houses.</i></p>
-            <p>Price: $500</p>
-            <asp:DropDownList ID="DropDownListLightCouch" runat="server">
+        <div id="ChairThree">
+            <img alt="Gray Chair Image" src="../Images/GrayChair.jpg" />
+            <%-- source: https://www.article.com/pla/1855/nord-galaxy-gray-chair?artcl_campignID=853505417&artcl_network=g&artcl_adgroupid=51816040228&artcl_keyword=&artcl_source=google&gclid=Cj0KCQjwoaz3BRDnARIsAF1RfLeFN7eTpBPbqIsJQ77sJxv2PqksR6YBCaw3yksDIw1ROT3OMB-JeDQaAjvqEALw_wcB  --%>
+            <p><strong>Gray Chair</strong></p>
+            <p><i>A chair with light gray color</i></p>
+            <p><i>that will bring bightness to your house.</i></p>
+            <p>Price: $150</p>
+            <asp:DropDownList ID="DropDownListGrayChair" runat="server">
                         <asp:ListItem Enabled ="true" Text="0" Value="None"></asp:ListItem>
                         <asp:ListItem Text="1" Value="1"></asp:ListItem>
                         <asp:ListItem Text="2" Value="2"></asp:ListItem>
@@ -82,7 +82,7 @@
                         <asp:ListItem Text="4" Value="4"></asp:ListItem>
                         <asp:ListItem Text="5" Value="5"></asp:ListItem>
              </asp:DropDownList>
-            <asp:Button ID="AddtoCartLightCouch" runat="server" Text="Add To Cart!" style="text-align:center" OnClick="addProductToCart"/>
+            <asp:Button ID="AddtoCartGrayChair" runat="server" Text="Add To Cart!" style="text-align:center" />
                         
         </div>
     </div>

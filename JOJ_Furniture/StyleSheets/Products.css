@@ -18,7 +18,7 @@ h3 {
 
 .grid-container {
     display: inline-flex;
-    padding: 100px;
+    padding: 50px;
 }
 
 img {
@@ -29,17 +29,19 @@ img {
 #CouchContainer {
     width: 500px;
     height: 200px;
-    float:left;
-    margin-left:200px;
-    margin-top:80px;
+    float: left;
+    margin-left: 60px;
 }
 
 #TableContainer {
-    width: 550px;
-    height: 250px;
-    margin-right: 100px;
+    width: 500px;
+    height: 200px;
+}
+
+#ChairContainer {
+    width: 500px;
+    height: 200px;
     float: right;
-    margin-top: 80px;
 }
 
 /*These next seven entries handle the CSS for the Header and Footer Menus*/

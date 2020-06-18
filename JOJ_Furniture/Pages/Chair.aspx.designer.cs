@@ -11,70 +11,70 @@ namespace JOJ_Furniture.Pages
 {
 
 
-    public partial class Table
+    public partial class Chair
     {
 
         /// <summary>
-        /// form4 컨트롤입니다.
+        /// form3 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form4;
+        protected global::System.Web.UI.HtmlControls.HtmlForm form3;
 
         /// <summary>
-        /// DropDownListKT 컨트롤입니다.
+        /// DropDownListModernChair 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownListKT;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListModernChair;
 
         /// <summary>
-        /// AddtoCarKTA 컨트롤입니다.
+        /// AddtoCartModernChair 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AddtoCarKTA;
+        protected global::System.Web.UI.WebControls.Button AddtoCartModernChair;
 
         /// <summary>
-        /// DropDownListCT 컨트롤입니다.
+        /// DropDownListDarkGrayChair 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownListCT;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListDarkGrayChair;
 
         /// <summary>
-        /// AddtoCartCT 컨트롤입니다.
+        /// AddtoCartDarkGrayChair 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AddtoCartCT;
+        protected global::System.Web.UI.WebControls.Button AddtoCartDarkGrayChair;
 
         /// <summary>
-        /// DropDownListCD 컨트롤입니다.
+        /// DropDownListGrayChair 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownListCD;
+        protected global::System.Web.UI.WebControls.DropDownList DropDownListGrayChair;
 
         /// <summary>
-        /// AddtoCartCD 컨트롤입니다.
+        /// AddtoCartGrayChair 컨트롤입니다.
         /// </summary>
         /// <remarks>
         /// 자동 생성 필드입니다.
         /// 수정하려면 디자이너 파일에서 코드 숨김 파일로 필드 선언을 이동하세요.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button AddtoCartCD;
+        protected global::System.Web.UI.WebControls.Button AddtoCartGrayChair;
     }
 }

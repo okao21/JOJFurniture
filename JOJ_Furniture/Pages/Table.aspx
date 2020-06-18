@@ -28,10 +28,12 @@
 
     <div class="grid-container">
 
-        <div class="table">
+        <div id ="TableOne">
             <img alt="Kitchen Table Image" src="../Images/kitchenTable.jpg" />
             <%-- source: https://www.google.com/imgres?imgurl=https%3A%2F%2Fimages.costco-static.com%2FImageDelivery%2FimageService%3FprofileId%3D12026540%26imageId%3D1291344-847__1%26recipeName%3D350&imgrefurl=https%3A%2F%2Fwww.costco.com%2Fdining-tables.html&tbnid=sM8Eu65gf6ZksM&vet=12ahUKEwjgyJjYyPvpAhVDlJ4KHaHiAbwQMyg3egUIARDCAQ..i&docid=HMy5MX5aE4_JKM&w=350&h=350&q=Tables&safe=active&ved=2ahUKEwjgyJjYyPvpAhVDlJ4KHaHiAbwQMyg3egUIARDCAQ  --%>
             <p><strong>Kitchen Table</strong></p>
+            <p><i>A Kitchen table with class design</i></p>
+            <p><i>that will make your every meal happy.</i></p>
             <p>Price: $300</p>
             <asp:DropDownList ID="DropDownListKT" runat="server">
                         <asp:ListItem Enabled ="true" Text="0" Value="None"></asp:ListItem>
@@ -45,10 +47,12 @@
                         
         </div>
 
-        <div class="table">
+        <div id ="TableTwo">
             <img alt="Coffee Table Image" src="../Images/coffeeTable.jpg" />
             <%-- source: https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.potterybarn.com%2Fpbimgs%2Fab%2Fimages%2Fdp%2Fwcm%2F202009%2F0495%2Fparkview-reclaimed-wood-coffee-table-c.jpg&imgrefurl=https%3A%2F%2Fwww.potterybarn.com%2Fproducts%2Fparkview-coffee-table%2F&tbnid=SxDdXXQcTtethM&vet=12ahUKEwiTxqnsyPvpAhWziJ4KHRQ4DYgQMygJegUIARCNAw..i&docid=0302euoO2XnXcM&w=558&h=501&q=coffee%20Tables&safe=active&ved=2ahUKEwiTxqnsyPvpAhWziJ4KHRQ4DYgQMygJegUIARCNAw --%>
             <p><strong>Coffee Table</strong></p>
+            <p><i>A Modern - styled table for</i></p>
+            <p><i>coffee and tea lovers.</i></p>
             <p>Price: $300</p>
             <asp:DropDownList ID="DropDownListCT" runat="server">
                         <asp:ListItem Enabled ="true" Text="0" Value="None"></asp:ListItem>
@@ -62,10 +66,12 @@
 
         </div>
 
-        <div class="table">
+        <div id ="TableThree">
             <img alt="Computer Desk Image" src="../Images/computerDesk.jpg" />
             <%-- source: https://www.google.com/imgres?imgurl=https%3A%2F%2Frichmedia.ca-richimage.com%2FImageDelivery%2FimageService%3FprofileId%3D12026539%26id%3D2045687%26recipeId%3D500&imgrefurl=https%3A%2F%2Fwww.costco.ca%2Fgeneva-computer-desk.product.100416312.html&tbnid=RLPWWhcEy8xPIM&vet=12ahUKEwjo9JP3yPvpAhUSgZ4KHZ0UADcQMygPegUIARCqAw..i&docid=5SvkXJ5WYN_-_M&w=1200&h=1200&q=desk&safe=active&ved=2ahUKEwjo9JP3yPvpAhUSgZ4KHZ0UADcQMygPegUIARCqAw --%>
             <p><strong>Computer Desk</strong></p>
+            <p><i>A computer desk with multiple storage</i></p>
+            <p><i>and more than enough space.</i></p>
             <p>Price: $400</p>
             <asp:DropDownList ID="DropDownListCD" runat="server">
                         <asp:ListItem Enabled ="true" Text="0" Value="None"></asp:ListItem>

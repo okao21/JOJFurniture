@@ -24,7 +24,9 @@
 
     <h1 id="intro">What are you looking for today?</h1>
 
-    <div id="CouchContainer">
+    <div class ="grid-container">
+
+        <div id="CouchContainer">
             <p><strong>Looking for Couches?</strong></p>
             <p><strong>Shop Now -></strong></p>
             <a href="Couch.aspx">
@@ -40,7 +42,15 @@
             </a>
         </div>
 
+        <div id="ChairContainer">
+            <p><strong>Looking for Chairs?</strong></p>
+            <p><strong>Shop Now -></strong></p>
+            <a href="Chair.aspx">
+            <img alt="Chair Image" src="../Images/Chair.jpg" />
+            </a>
+        </div>
 
+    </div>
     <ul id="Footer">
         <li class="Header"><a href="Home.aspx" class="HeaderListEntry">Home</a></li>
         <li class="Header"><a href="Login.aspx" class="HeaderListEntry">Login</a></li>

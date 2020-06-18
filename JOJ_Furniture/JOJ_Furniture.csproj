@@ -79,6 +79,7 @@
     <Content Include="Images\member.png" />
     <Content Include="Images\Table.jpg" />
     <Content Include="Pages\Cart.aspx" />
+    <Content Include="Pages\Chair.aspx" />
     <Content Include="Pages\Confirm.aspx" />
     <Content Include="Pages\Couch.aspx" />
     <Content Include="Pages\Products.aspx" />
@@ -89,6 +90,7 @@
     <Content Include="Pages\Table.aspx" />
     <Content Include="Scripts\MainFunctions.js" />
     <Content Include="StyleSheets\Cart.css" />
+    <Content Include="StyleSheets\Chair.css" />
     <Content Include="StyleSheets\Couch.css" />
     <Content Include="StyleSheets\CreateAccount.css" />
     <Content Include="StyleSheets\LoginPage.css" />
@@ -106,6 +108,13 @@
     </Compile>
     <Compile Include="Pages\Cart.aspx.designer.cs">
       <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Chair.aspx.cs">
+      <DependentUpon>Chair.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Chair.aspx.designer.cs">
+      <DependentUpon>Chair.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Confirm.aspx.cs">
       <DependentUpon>Confirm.aspx</DependentUpon>
