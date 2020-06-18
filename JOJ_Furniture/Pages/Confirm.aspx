@@ -28,16 +28,7 @@
 
 
 
-<ul id="Footer">
-        <li class="Header"><a href="Home.aspx" class="HeaderListEntry">Home</a></li>
-        <li class="Header"><a href="Login.aspx" class="HeaderListEntry">Login</a></li>
-        <li class="Header"><a href="CreateAccount.aspx" class="HeaderListEntry">Create Account</a></li>
-        <li class="Header"><a href="Products.aspx" class="HeaderListEntry">Products</a></li>
-    </ul>
-    <ul id="FooterRight">
-        <li class="Header2"><a href="Home.aspx" class="HeaderListEntry">Log Out</a></li>
-        <li class="Header2"><a href="Cart.aspx" class="HeaderListEntry">Cart</a></li>
-    </ul>
+
     </form>
 </body>
 </html>
