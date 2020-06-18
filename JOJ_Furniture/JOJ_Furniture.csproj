@@ -67,9 +67,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Images\coffeeTable.jpg" />
+    <Content Include="Images\computerDesk.jpg" />
+    <Content Include="Images\Couch.jpg" />
+    <Content Include="Images\GraySofa.jpg" />
+    <Content Include="Images\GreenSofa.jpg" />
+    <Content Include="Images\kitchenTable.jpg" />
+    <Content Include="Images\LightGraySofa.jpg" />
     <Content Include="Images\MainPageImage.jpg" />
     <Content Include="Images\Map.JPG" />
     <Content Include="Images\member.png" />
+    <Content Include="Images\Table.jpg" />
     <Content Include="Pages\Cart.aspx" />
     <Content Include="Pages\Confirm.aspx" />
     <Content Include="Pages\Couch.aspx" />

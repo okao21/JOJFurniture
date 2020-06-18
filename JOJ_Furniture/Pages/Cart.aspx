@@ -36,59 +36,79 @@
             <th>Total</th>
         </tr>
         <tr>
-            <td>Couch</td>
+            <td>Green Sofa</td>
+            <td>$550</td>
+            <td>
+                <asp:Button ID="addButtonGS" runat="server" Text="+" OnClick="addProduct" />
+                <asp:Label ID="GreenSofaQlbl" runat="server" Text=""></asp:Label>
+                <asp:Button ID="removeButtonGS" runat="server" Text="-" OnClick="removeProduct" />
+            </td>
+            <td>
+                <asp:Label ID="GreenCouchTotalLbl" runat="server" Text="$"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td>Gray Sofa</td>
             <td>$500</td>
             <td>
-                <asp:DropDownList ID="CouchQuantityddl" OnSelectedIndexChanged="Quantity_Change" AutoPostBack="true" runat="server">
-                    
-                    <asp:ListItem Selected="True">0</asp:ListItem>
-                    <asp:ListItem>1</asp:ListItem>
-                    <asp:ListItem>2</asp:ListItem>
-                    <asp:ListItem>3</asp:ListItem>
-                    <asp:ListItem>4</asp:ListItem>
-                    <asp:ListItem>5</asp:ListItem>
-                </asp:DropDownList>
+                <asp:Button ID="addButtonGrayS" runat="server" Text="+" OnClick="addProduct" />
+                <asp:Label ID="GraySofaQlbl" runat="server" Text=""></asp:Label>
+                <asp:Button ID="removeButtonGrayS" runat="server" Text="-" OnClick="removeProduct" />
             </td>
             <td>
-                <asp:Label ID="CouchTotalLbl" runat="server" Text="$"></asp:Label>
+                <asp:Label ID="GrayCouchTotalLbl" runat="server" Text="$"></asp:Label>
             </td>
         </tr>
         <tr>
-            <td>Chair</td>
-            <td>$200</td>
+            <td>Light Gray Sofa</td>
+            <td>$500</td>
             <td>
-                <asp:DropDownList ID="ChairQuantityddl" OnSelectedIndexChanged="Quantity_Change" AutoPostBack="true" runat="server">
-                    
-                    <asp:ListItem Selected="True">0</asp:ListItem>
-                    <asp:ListItem>1</asp:ListItem>
-                    <asp:ListItem>2</asp:ListItem>
-                    <asp:ListItem>3</asp:ListItem>
-                    <asp:ListItem>4</asp:ListItem>
-                    <asp:ListItem>5</asp:ListItem>
-                </asp:DropDownList>
+                <asp:Button ID="addButtonLGrayS" runat="server" Text="+" OnClick="addProduct" />
+                <asp:Label ID="LightGraySofaQlbl" runat="server" Text=""></asp:Label>
+                <asp:Button ID="removeButtonLGrayS" runat="server" Text="-" OnClick="removeProduct" />
             </td>
             <td>
-                <asp:Label ID="ChairTotalLbl" runat="server" Text="$"></asp:Label>
+                <asp:Label ID="lightGrayCouchTotallbl" runat="server" Text="$"></asp:Label>
             </td>
         </tr>
         <tr>
-            <td>Table</td>
-            <td>$100</td>
+            <td>Kitchen Table</td>
+            <td>$300</td>
             <td>
-                <asp:DropDownList ID="TableQuantityddl" OnSelectedIndexChanged="Quantity_Change" AutoPostBack="true" runat="server">
-                    
-                    <asp:ListItem Selected="True">0</asp:ListItem>
-                    <asp:ListItem>1</asp:ListItem>
-                    <asp:ListItem>2</asp:ListItem>
-                    <asp:ListItem>3</asp:ListItem>
-                    <asp:ListItem>4</asp:ListItem>
-                    <asp:ListItem>5</asp:ListItem>
-                </asp:DropDownList>
+                <asp:Button ID="addKT" runat="server" Text="+" OnClick="addProduct" />
+                <asp:Label ID="KitchenTableQlbl" runat="server" Text=""></asp:Label>
+                <asp:Button ID="removeKT" runat="server" Text="-" OnClick="removeProduct" />
             </td>
             <td>
-                <asp:Label ID="TableTotalLbl" runat="server" Text="$"></asp:Label>
+                <asp:Label ID="KitchenTableTotalLbl" runat="server" Text="$"></asp:Label>
             </td>
         </tr>
+        <tr>
+            <td>Coffee Table</td>
+            <td>$300</td>
+            <td>
+                <asp:Button ID="addCT" runat="server" Text="+" OnClick="addProduct" />
+                <asp:Label ID="coffeeTableQlbl" runat="server" Text=""></asp:Label>
+                <asp:Button ID="removeCT" runat="server" Text="-" OnClick="removeProduct" />
+            </td>
+            <td>
+                <asp:Label ID="CoffeeTableTotallbl" runat="server" Text="$"></asp:Label>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Computer Desk</td>
+            <td>$400</td>
+            <td>
+                <asp:Button ID="addCD" runat="server" Text="+" OnClick="addProduct" />
+                <asp:Label ID="computerDeskQlbl" runat="server" Text=""></asp:Label>
+                <asp:Button ID="removeCD" runat="server" Text="-" OnClick="removeProduct" />
+            </td>
+            <td>
+                <asp:Label ID="ComputerDeskTotallbl" runat="server" Text="$"></asp:Label>
+            </td>
+        </tr>
+
         <tr>
             <td colspan="4"></td>
         </tr>

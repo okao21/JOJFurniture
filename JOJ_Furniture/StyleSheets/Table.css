@@ -14,8 +14,9 @@ h3 {
 }
 
 .grid-container {
-    display: inline-flex;
-    padding: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 100px;
 }
 
 img {
@@ -24,23 +25,12 @@ img {
 }
 
 
-#TableOne {
+.TableOne {
     width: 500px;
     height: 200px;
     margin-left:200px;
 }
 
-#TableTwo {
-    width: 500px;
-    height: 200px;
-    margin: 50px;
-}
-
-#TableThree {
-    width: 500px;
-    height: 200px;
-    margin-right:200px;
-}
 
 
 

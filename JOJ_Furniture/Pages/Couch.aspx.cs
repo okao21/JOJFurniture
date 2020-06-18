@@ -17,5 +17,23 @@ namespace JOJ_Furniture.Pages
                 Response.Redirect("../Pages/Redirect.aspx");
             }
         }
+
+        protected void addProductToCart(object sender, EventArgs e)
+        {
+            Button thisButton = (Button)sender;
+
+            if (thisButton.ID.Equals("AddtoCartGreenCouch"))
+            {
+                Response.Cookies["greenCouchQuantity"].Value =DropDownListGreenCouch.SelectedValue;
+            }
+            else if (thisButton.ID.Equals("AddtoCartGrayCouch"))
+            {
+                Response.Cookies["grayCouchQuantity"].Value = DropDownListGrayCouch.SelectedValue;
+            }
+            else if (thisButton.ID.Equals("AddtoCartLightCouch"))
+            {
+                Response.Cookies["lightGrayCouchQuantity"].Value = DropDownListLightCouch.SelectedValue;
+            }
+        }
     }
 }

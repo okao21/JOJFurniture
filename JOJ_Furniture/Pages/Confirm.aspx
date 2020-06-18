@@ -20,7 +20,7 @@
         <li class="Header2"><a href="Cart.aspx" class="HeaderListEntry">Cart</a></li>
     </ul>
 
-        <h1 id="intro">Confirmation</h1>
+        <h1 id="intro">Success!</h1>
         <br />
         <h2>We received your order. Your Order ID is:</h2>
 
