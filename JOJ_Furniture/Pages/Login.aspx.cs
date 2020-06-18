@@ -88,6 +88,15 @@ namespace JOJ_Furniture.Pages
                         //This closes our stream reader, so the file can accessed read by other functions.
                         sr.Close();
 
+                        //create cookie for cart use
+                        Response.Cookies["greenCouchQuantity"].Value = "0";
+                        Response.Cookies["grayCouchQuantity"].Value = "0";
+                        Response.Cookies["lightGrayCouchQuantity"].Value = "0";
+
+                        Response.Cookies["kitchenTableQuantity"].Value = "0";
+                        Response.Cookies["coffeeTableQuantity"].Value = "0";
+                        Response.Cookies["computerDeskQuantity"].Value = "0";
+
                         //Then we can navigate away
                         Response.Redirect("../Pages/Products.aspx");
                     }

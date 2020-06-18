@@ -33,58 +33,220 @@ namespace JOJ_Furniture.Pages
         protected global::System.Web.UI.WebControls.Label placeOrderLbl;
 
         /// <summary>
-        /// CouchQuantityddl control.
+        /// addButtonGS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList CouchQuantityddl;
+        protected global::System.Web.UI.WebControls.Button addButtonGS;
 
         /// <summary>
-        /// CouchTotalLbl control.
+        /// GreenSofaQlbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label CouchTotalLbl;
+        protected global::System.Web.UI.WebControls.Label GreenSofaQlbl;
 
         /// <summary>
-        /// ChairQuantityddl control.
+        /// removeButtonGS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ChairQuantityddl;
+        protected global::System.Web.UI.WebControls.Button removeButtonGS;
 
         /// <summary>
-        /// ChairTotalLbl control.
+        /// GreenCouchTotalLbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label ChairTotalLbl;
+        protected global::System.Web.UI.WebControls.Label GreenCouchTotalLbl;
 
         /// <summary>
-        /// TableQuantityddl control.
+        /// addButtonGrayS control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TableQuantityddl;
+        protected global::System.Web.UI.WebControls.Button addButtonGrayS;
 
         /// <summary>
-        /// TableTotalLbl control.
+        /// GraySofaQlbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TableTotalLbl;
+        protected global::System.Web.UI.WebControls.Label GraySofaQlbl;
+
+        /// <summary>
+        /// removeButtonGrayS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button removeButtonGrayS;
+
+        /// <summary>
+        /// GrayCouchTotalLbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label GrayCouchTotalLbl;
+
+        /// <summary>
+        /// addButtonLGrayS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button addButtonLGrayS;
+
+        /// <summary>
+        /// LightGraySofaQlbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LightGraySofaQlbl;
+
+        /// <summary>
+        /// removeButtonLGrayS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button removeButtonLGrayS;
+
+        /// <summary>
+        /// lightGrayCouchTotallbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lightGrayCouchTotallbl;
+
+        /// <summary>
+        /// addKT control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button addKT;
+
+        /// <summary>
+        /// KitchenTableQlbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label KitchenTableQlbl;
+
+        /// <summary>
+        /// removeKT control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button removeKT;
+
+        /// <summary>
+        /// KitchenTableTotalLbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label KitchenTableTotalLbl;
+
+        /// <summary>
+        /// addCT control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button addCT;
+
+        /// <summary>
+        /// coffeeTableQlbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label coffeeTableQlbl;
+
+        /// <summary>
+        /// removeCT control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button removeCT;
+
+        /// <summary>
+        /// CoffeeTableTotallbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label CoffeeTableTotallbl;
+
+        /// <summary>
+        /// addCD control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button addCD;
+
+        /// <summary>
+        /// computerDeskQlbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label computerDeskQlbl;
+
+        /// <summary>
+        /// removeCD control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button removeCD;
+
+        /// <summary>
+        /// ComputerDeskTotallbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ComputerDeskTotallbl;
 
         /// <summary>
         /// GrandTotalLbl control.

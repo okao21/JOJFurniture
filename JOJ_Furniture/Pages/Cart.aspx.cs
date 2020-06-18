@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -10,19 +12,25 @@ namespace JOJ_Furniture.Pages
 {
     public partial class WebForm10 : System.Web.UI.Page
     {
-        String EmailAddress = "oswald.kao@student.vcc.ca";
-
         const double COUCH_PRICE = 500;
-        const double CHAIR_PRICE = 200;
-        const double TABLE_PRICE = 100;
+        const double GREEN_COUCH_PRICE = 550;
+        const double COMPUTER_DESK_PRICE = 400;
+        const double TABLE_PRICE = 300;
 
-        int couchQuantity = 0;
-        int chairQuantity = 0;
-        int tableQuantity = 0;
+        int graycouchQuantity = 0;
+        int lightGrayCouchQuantity = 0;
+        int greenCouchQuantity = 0;
+        int kitchenTableQuantity = 0;
+        int coffeeTableQuanaity = 0;
+        int ComputerDeskQuantity = 0;
 
-        double couchTotal;
-        double chairTotal;
-        double tableTotal;
+        
+        double grayCouchTotal;
+        double lightGrayCouchTotal;
+        double greenCouchCouchTotal;
+        double kitchenTableTotal;
+        double coffeeTableTotal;
+        double computerDeskTotal;
 
         int currentOrderID;
 
@@ -32,9 +40,25 @@ namespace JOJ_Furniture.Pages
         {
             placeOrderLbl.Visible = true;
 
-            CouchQuantityddl.Enabled = false;
-            ChairQuantityddl.Enabled = false;
-            TableQuantityddl.Enabled = false;
+            //disable add and remove buttons for all products
+
+            addButtonGrayS.Enabled = false;
+            removeButtonGrayS.Enabled = false;
+
+            addButtonGS.Enabled = false; ;
+            removeButtonGS.Enabled = false; ;
+
+            addButtonLGrayS.Enabled = false; ;
+            removeButtonLGrayS.Enabled = false; ;
+
+            addCD.Enabled = false; ;
+            removeCD.Enabled = false; ;
+
+            addCT.Enabled = false; ;
+            removeCT.Enabled = false; ;
+
+            addKT.Enabled = false; ;
+            removeKT.Enabled = false;            
 
             editBtn.Visible = true;
 
@@ -49,9 +73,25 @@ namespace JOJ_Furniture.Pages
 
             checkoutBtn.Text = "Proceed to Check Out";
 
-            CouchQuantityddl.Enabled = true;
-            ChairQuantityddl.Enabled = true;
-            TableQuantityddl.Enabled = true;
+            //Allow User to change quantities
+            //enable add and remove buttons for all products
+            addButtonGrayS.Enabled = true;
+            removeButtonGrayS.Enabled = true;
+
+            addButtonGS.Enabled = true; ;
+            removeButtonGS.Enabled = true; ;
+
+            addButtonLGrayS.Enabled = true; ;
+            removeButtonLGrayS.Enabled = true; ;
+
+            addCD.Enabled = true; ;
+            removeCD.Enabled = true; ;
+
+            addCT.Enabled = true; ;
+            removeCT.Enabled = true; ;
+
+            addKT.Enabled = true; ;
+            removeKT.Enabled = true;
 
             editBtn.Visible = false;
 
@@ -68,8 +108,6 @@ namespace JOJ_Furniture.Pages
             //generate random Order ID
             currentOrderID = rand.Next(10000, 100000);
 
-            writeToDB();
-
             Response.Cookies["Order ID"].Value = currentOrderID.ToString();
 
 
@@ -79,64 +117,217 @@ namespace JOJ_Furniture.Pages
 
         }
 
-        protected void Quantity_Change(Object sender, EventArgs e)
+        protected void addProduct(object sender, EventArgs e)
         {
-            bool isCouchSelected = Int32.TryParse(CouchQuantityddl.SelectedValue, out couchQuantity);
-            bool isTableSelected = Int32.TryParse(TableQuantityddl.SelectedValue, out tableQuantity);
-            bool isChairSelected = Int32.TryParse(ChairQuantityddl.SelectedValue, out chairQuantity);
+            Button thisButton = (Button)sender;
 
-            Response.Cookies["couchQuantity"].Value = CouchQuantityddl.SelectedValue;
-            Response.Cookies["tableQuantity"].Value = TableQuantityddl.SelectedValue;
-            Response.Cookies["chairQuantity"].Value = ChairQuantityddl.SelectedValue;
-
-            if (couchQuantity == 0 && tableQuantity == 0 && chairQuantity == 0 && isCouchSelected == true && isTableSelected == true && isChairSelected == true)
+            switch (thisButton.ID)
             {
-                Response.Write("<script>alert('Cart is Empty. Redirect to Products Page');window.location='../Pages/Products.aspx';</script>");
+                case ("addButtonGS"):
+                    greenCouchQuantity = greenCouchQuantity + 1;
+                    Response.Cookies["greenCouchQuantity"].Value = greenCouchQuantity.ToString();
+                    GreenSofaQlbl.Text = greenCouchQuantity.ToString();
+                    break;
+                case ("addKT"):
+                    kitchenTableQuantity = kitchenTableQuantity+ 1;
+                    Response.Cookies["kitchenTableQuantity"].Value = kitchenTableQuantity.ToString();
+                    KitchenTableQlbl.Text = kitchenTableQuantity.ToString();
+                    
+                    break;
+                case ("addCD"):
+                    ComputerDeskQuantity += 1;
+                    Response.Cookies["computerDeskQuantity"].Value = ComputerDeskQuantity.ToString();
+                    computerDeskQlbl.Text = ComputerDeskQuantity.ToString();
+                    break;
+                case ("addCT"):
+                    coffeeTableQuanaity += 1;
+                    Response.Cookies["coffeeTableQuantity"].Value = coffeeTableQuanaity.ToString();
+                    coffeeTableQlbl.Text = coffeeTableQuanaity.ToString();
+                    break;
+                case ("addButtonGrayS"):
+                    graycouchQuantity += 1;
+                    Response.Cookies["grayCouchQuantity"].Value = graycouchQuantity.ToString();
+                    GraySofaQlbl.Text = graycouchQuantity.ToString();
+                    break;
+                case ("addButtonLGrayS"):
+                    lightGrayCouchQuantity += 1;
+                    Response.Cookies["lightGrayCouchQuantity"].Value = lightGrayCouchQuantity.ToString();
+                    LightGraySofaQlbl.Text = lightGrayCouchQuantity.ToString();
+                    break;
             }
-
             updateDisplay();
+            
         }
 
-        private void writeToDB()
+        protected void removeProduct(object sender, EventArgs e)
         {
-            var dbFilePath = Server.MapPath("../TestOrder/JOJOrdersDb.csv");
+            Button thisButton = (Button)sender;
+            switch (thisButton.ID)
+            {
+                case ("removeKT"):
+                    if (kitchenTableQuantity > 0)
+                    {
+                        kitchenTableQuantity = kitchenTableQuantity-1;
+                        Response.Cookies["kitchenTableQuantity"].Value = kitchenTableQuantity.ToString();
+                        KitchenTableQlbl.Text = kitchenTableQuantity.ToString();
+                        
+                    }
+                    
+                    break;
 
-            string couchQuantityString = Request.Cookies["couchQuantity"].Value;
-            string tableQuantityString = Request.Cookies["tableQuantity"].Value;
-            string chairQuantityString = Request.Cookies["chairQuantity"].Value;
+                case ("removeButtonGS"):
+                    if (greenCouchQuantity > 0)
+                    {
+                        greenCouchQuantity = greenCouchQuantity - 1;
+                        Response.Cookies["greenCouchQuantity"].Value = greenCouchQuantity.ToString();
+                        GreenSofaQlbl.Text = greenCouchQuantity.ToString();
+                        
+                    }
+                    break;
+                case ("removeButtonGrayS"):
+                    if (graycouchQuantity > 0)
+                    {
+                        graycouchQuantity -= 1;
+                        Response.Cookies["grayCouchQuantity"].Value = graycouchQuantity.ToString();
+                        GraySofaQlbl.Text = graycouchQuantity.ToString();
 
-            couchQuantity = Int32.Parse(couchQuantityString);
-            tableQuantity = Int32.Parse(tableQuantityString);
-            chairQuantity = Int32.Parse(chairQuantityString);
+                    }
+                    break;
+                case ("removeButtonLGrayS"):
+                    if (lightGrayCouchQuantity > 0)
+                    {
+                        lightGrayCouchQuantity -= 1;
+                        Response.Cookies["lightGrayCouchQuantity"].Value = lightGrayCouchQuantity.ToString();
+                        LightGraySofaQlbl.Text = LightGraySofaQlbl.ToString();
 
-            string newOrder = "\n" + currentOrderID + "," + couchQuantity + "," + tableQuantity + "," + chairQuantity + "," + COUCH_PRICE + "," + TABLE_PRICE + "," + CHAIR_PRICE + "," + EmailAddress;
+                    }
+                    break;
 
-            File.AppendAllText(dbFilePath, newOrder);
+                case ("removeCD"):
+                    if (ComputerDeskQuantity > 0)
+                    {
+                        ComputerDeskQuantity -= 1;
+                        Response.Cookies["computerDeskQuantity"].Value = ComputerDeskQuantity.ToString();
+                        computerDeskQlbl.Text = ComputerDeskQuantity.ToString();
+                    }
+                    break;
+                case ("removeCT"):
+                    if (coffeeTableQuanaity > 0)
+                    {
+                        coffeeTableQuanaity -= 1;
+                        Response.Cookies["coffeeTableQuantity"].Value = coffeeTableQuanaity.ToString();
+                        coffeeTableQlbl.Text = coffeeTableQuanaity.ToString();
+                    }
+                    break;
+            }
+            updateDisplay();
+
         }
 
         private void updateDisplay()
         {
-            couchTotal = couchQuantity * COUCH_PRICE;
-            chairTotal = chairQuantity * CHAIR_PRICE;
-            tableTotal = tableQuantity * TABLE_PRICE;
+            grayCouchTotal = graycouchQuantity * COUCH_PRICE;
+            lightGrayCouchTotal = lightGrayCouchQuantity * COUCH_PRICE;
+            greenCouchCouchTotal = greenCouchQuantity * GREEN_COUCH_PRICE;
+            kitchenTableTotal = kitchenTableQuantity * TABLE_PRICE;
+            coffeeTableTotal = coffeeTableQuanaity * TABLE_PRICE;
+            computerDeskTotal= ComputerDeskQuantity * COMPUTER_DESK_PRICE;
 
-            double grandTotal = couchTotal + chairTotal + tableTotal;
-            double afterTaxTotal = grandTotal * 1.12;
+            double grandTotal = grayCouchTotal + lightGrayCouchTotal + greenCouchCouchTotal+kitchenTableTotal+coffeeTableTotal+computerDeskTotal;
+            double afterTaxTotal = grandTotal * (1.00+getProvinceTaxRate());
 
-            CouchTotalLbl.Text = "$" + couchTotal;
-            ChairTotalLbl.Text = "$" + chairTotal;
-            TableTotalLbl.Text = "$" + tableTotal;
+            GrayCouchTotalLbl.Text = grayCouchTotal.ToString("C", CultureInfo.CurrentCulture);
+            lightGrayCouchTotallbl.Text=lightGrayCouchTotal.ToString("C", CultureInfo.CurrentCulture);
+            GreenCouchTotalLbl.Text=greenCouchCouchTotal.ToString("C", CultureInfo.CurrentCulture);
 
-            GrandTotalLbl.Text = "Grand Total: $" + grandTotal;
-            AfterTaxTotalLbl.Text = "Total(+TAX): $" + afterTaxTotal;
+            KitchenTableTotalLbl.Text=kitchenTableTotal.ToString("C", CultureInfo.CurrentCulture);
+            CoffeeTableTotallbl.Text=coffeeTableTotal.ToString("C", CultureInfo.CurrentCulture); ;
+            ComputerDeskTotallbl.Text=computerDeskTotal.ToString("C", CultureInfo.CurrentCulture);
+
+            GrandTotalLbl.Text = "Grand Total: " + grandTotal.ToString("C", CultureInfo.CurrentCulture);
+            AfterTaxTotalLbl.Text = "Total(+TAX): " + afterTaxTotal.ToString("C", CultureInfo.CurrentCulture);
+        }
+
+        private double getProvinceTaxRate()
+        {
+            double taxRate;
+            string provinceSelected = Request.Cookies["province"].Value;
+
+            if(provinceSelected=="Alberta"||provinceSelected == "Northwest Territories" || provinceSelected == "Nunavut" || provinceSelected == "Yukon")
+            {
+                return taxRate = 0.05;
+            }
+            else if (provinceSelected == "Manitoba"||provinceSelected== "British Columbia")
+            {
+                return taxRate = 0.12;
+            }
+            else if(provinceSelected=="New Brunswick"||provinceSelected=="Newfoundland and Labrador"||provinceSelected=="Nova Scotia"||provinceSelected=="Prince Edward Island")
+            {
+                return taxRate = 0.15;
+            }
+            else if (provinceSelected == "Ontario")
+            {
+                return taxRate = 0.13;
+            }
+            else if (provinceSelected == "Quebec")
+            {
+                return taxRate = 0.14975;
+            }
+            else if (provinceSelected == "Saskatchewan")
+            {
+                return taxRate = 0.11;
+            }
+            else
+            {
+                return 0;
+            }
+            
+        }
+
+        private int cookieStringtoNumber(string thisString)
+        {
+            if (string.IsNullOrEmpty(thisString))
+            {
+                return 0;
+            }
+            else
+            {
+                return Int32.Parse(thisString);
+            }
         }
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            string emailAddress;
             //First we check to see if the user is logged in by looking for a cookie with their email
             if (Request.Cookies["email"] == null)
             {
                 Response.Redirect("../Pages/Redirect.aspx");
+            }
+            else
+            {
+                emailAddress = Request.Cookies["email"].Value;
+
+
+                graycouchQuantity = cookieStringtoNumber(Request.Cookies["grayCouchQuantity"].Value);
+                GraySofaQlbl.Text = Request.Cookies["grayCouchQuantity"].Value;
+
+                lightGrayCouchQuantity = cookieStringtoNumber(Request.Cookies["lightGrayCouchQuantity"].Value);
+                LightGraySofaQlbl.Text = Request.Cookies["lightGrayCouchQuantity"].Value;
+
+                greenCouchQuantity = cookieStringtoNumber(Request.Cookies["greenCouchQuantity"].Value);
+                GreenSofaQlbl.Text = Request.Cookies["greenCouchQuantity"].Value;
+
+                kitchenTableQuantity = cookieStringtoNumber(Request.Cookies["kitchenTableQuantity"].Value);
+                KitchenTableQlbl.Text = Request.Cookies["kitchenTableQuantity"].Value;
+                
+                coffeeTableQuanaity = cookieStringtoNumber(Request.Cookies["coffeeTableQuantity"].Value);
+                coffeeTableQlbl.Text = Request.Cookies["coffeeTableQuantity"].Value;
+
+                ComputerDeskQuantity = cookieStringtoNumber(Request.Cookies["computerDeskQuantity"].Value);
+                computerDeskQlbl.Text = Request.Cookies["computerDeskQuantity"].Value;
+
+                updateDisplay();
             }
         }
     }

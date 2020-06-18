@@ -53,7 +53,7 @@
                         <asp:ListItem Text="Alberta" Value="Alberta"></asp:ListItem>
                         <asp:ListItem Text="British Columbia" Value="British Columbia"></asp:ListItem>
                         <asp:ListItem Text="Manitoba" Value="Manitoba"></asp:ListItem>
-                        <asp:ListItem Text="New Brunswick" Value="New Brunswich"></asp:ListItem>
+                        <asp:ListItem Text="New Brunswick" Value="New Brunswick"></asp:ListItem>
                         <asp:ListItem Text="Newfoundland and Labrador" Value="Newfoundland and Labrador"></asp:ListItem>
                         <asp:ListItem Text="Northwest Territories" Value="Northwest Territories"></asp:ListItem>
                         <asp:ListItem Text="Nova Scotia" Value="Nova Scotia"></asp:ListItem>

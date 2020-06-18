@@ -14,3 +14,8 @@
 table {
     border: 1px solid black;
 }
+
+.productImage{
+    height: 5%;
+    width: 5%;
+}
