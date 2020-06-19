@@ -16,6 +16,7 @@ namespace JOJ_Furniture.Pages
         const double GREEN_COUCH_PRICE = 550;
         const double COMPUTER_DESK_PRICE = 400;
         const double TABLE_PRICE = 300;
+        const double CHAIR_PRICE = 150;
 
         int graycouchQuantity = 0;
         int lightGrayCouchQuantity = 0;
@@ -23,7 +24,9 @@ namespace JOJ_Furniture.Pages
         int kitchenTableQuantity = 0;
         int coffeeTableQuanaity = 0;
         int ComputerDeskQuantity = 0;
-
+        int modernChairQuanitity = 0;
+        int grayChairQuantity = 0;
+        int darkGrayChairQuantity = 0;
         
         double grayCouchTotal;
         double lightGrayCouchTotal;
@@ -31,6 +34,9 @@ namespace JOJ_Furniture.Pages
         double kitchenTableTotal;
         double coffeeTableTotal;
         double computerDeskTotal;
+        double modernChairTotal;
+        double grayChairTotal;
+        double darkGrayChairTotal;
 
         int currentOrderID;
 
@@ -58,7 +64,16 @@ namespace JOJ_Furniture.Pages
             removeCT.Enabled = false; ;
 
             addKT.Enabled = false; ;
-            removeKT.Enabled = false;            
+            removeKT.Enabled = false;
+
+            addMC.Enabled = false;
+            removeMC.Enabled = false;
+
+            addDGC.Enabled = false;
+            removeDGC.Enabled = false; 
+
+            addGC.Enabled = false; 
+            removeGC.Enabled = false; 
 
             editBtn.Visible = true;
 
@@ -93,14 +108,20 @@ namespace JOJ_Furniture.Pages
             addKT.Enabled = true; ;
             removeKT.Enabled = true;
 
+            addMC.Enabled = true;
+            removeMC.Enabled = true;
+
+            addDGC.Enabled = true;
+            removeDGC.Enabled = true;
+
+            addGC.Enabled = true;
+            removeGC.Enabled = true;
+
             editBtn.Visible = false;
 
             checkoutBtn.Visible = true;
 
             confirmBtn.Visible = false;
-
-
-
         }
 
         protected void placeOrder(Object sender, EventArgs e)
@@ -153,6 +174,21 @@ namespace JOJ_Furniture.Pages
                     lightGrayCouchQuantity += 1;
                     Response.Cookies["lightGrayCouchQuantity"].Value = lightGrayCouchQuantity.ToString();
                     LightGraySofaQlbl.Text = lightGrayCouchQuantity.ToString();
+                    break;
+                case ("addMC"):
+                    modernChairQuanitity += 1;
+                    Response.Cookies["modernChairQuantity"].Value = modernChairQuanitity.ToString();
+                    modernChairQlbl.Text = modernChairQuanitity.ToString();
+                    break;
+                case ("addDGC"):
+                    darkGrayChairQuantity += 1;
+                    Response.Cookies["darkGrayChairQuantity"].Value = darkGrayChairQuantity.ToString();
+                    darkGrayChairQlbl.Text = darkGrayChairQuantity.ToString();
+                    break;
+                case ("addGC"):
+                    grayChairQuantity += 1;
+                    Response.Cookies["grayChairQuantity"].Value = grayChairQuantity.ToString();
+                    grayChairQlbl.Text = grayChairQuantity.ToString();
                     break;
             }
             updateDisplay();
@@ -219,6 +255,32 @@ namespace JOJ_Furniture.Pages
                         coffeeTableQlbl.Text = coffeeTableQuanaity.ToString();
                     }
                     break;
+
+                case ("removeGC"):
+                    if (grayChairQuantity > 0)
+                    {
+                        grayChairQuantity -= 1;
+                        Response.Cookies["grayChairQuantity"].Value = grayChairQuantity.ToString();
+                        grayChairQlbl.Text = grayChairQuantity.ToString();
+                    }
+                    break;
+                case ("removeMC"):
+                    if (modernChairQuanitity > 0)
+                    {
+                        modernChairQuanitity -= 1;
+                        Response.Cookies["modernChairQuantity"].Value = modernChairQuanitity.ToString();
+                        modernChairQlbl.Text = modernChairQuanitity.ToString();
+                    }
+                    break;
+                case ("removeDGC"):
+                    if (darkGrayChairQuantity > 0)
+                    {
+                        darkGrayChairQuantity -= 1;
+                        Response.Cookies["darkGrayChairQuantity"].Value = darkGrayChairQuantity.ToString();
+                        darkGrayChairQlbl.Text = darkGrayChairQuantity.ToString();
+                    }
+                    break;
+
             }
             updateDisplay();
 
@@ -232,8 +294,11 @@ namespace JOJ_Furniture.Pages
             kitchenTableTotal = kitchenTableQuantity * TABLE_PRICE;
             coffeeTableTotal = coffeeTableQuanaity * TABLE_PRICE;
             computerDeskTotal= ComputerDeskQuantity * COMPUTER_DESK_PRICE;
+            modernChairTotal = modernChairQuanitity * CHAIR_PRICE;
+            grayChairTotal = grayChairQuantity * CHAIR_PRICE;
+            darkGrayChairTotal = darkGrayChairQuantity * CHAIR_PRICE;
 
-            double grandTotal = grayCouchTotal + lightGrayCouchTotal + greenCouchCouchTotal+kitchenTableTotal+coffeeTableTotal+computerDeskTotal;
+            double grandTotal = grayCouchTotal + lightGrayCouchTotal + greenCouchCouchTotal+kitchenTableTotal+coffeeTableTotal+computerDeskTotal+modernChairTotal+grayChairTotal+darkGrayChairTotal;
             double afterTaxTotal = grandTotal * (1.00+getProvinceTaxRate());
 
             GrayCouchTotalLbl.Text = grayCouchTotal.ToString("C", CultureInfo.CurrentCulture);
@@ -241,8 +306,12 @@ namespace JOJ_Furniture.Pages
             GreenCouchTotalLbl.Text=greenCouchCouchTotal.ToString("C", CultureInfo.CurrentCulture);
 
             KitchenTableTotalLbl.Text=kitchenTableTotal.ToString("C", CultureInfo.CurrentCulture);
-            CoffeeTableTotallbl.Text=coffeeTableTotal.ToString("C", CultureInfo.CurrentCulture); ;
+            CoffeeTableTotallbl.Text=coffeeTableTotal.ToString("C", CultureInfo.CurrentCulture); 
             ComputerDeskTotallbl.Text=computerDeskTotal.ToString("C", CultureInfo.CurrentCulture);
+
+            modernChairTotallbl.Text=modernChairTotal.ToString("C", CultureInfo.CurrentCulture);
+            darkGrayChairTotallbl.Text=darkGrayChairTotal.ToString("C", CultureInfo.CurrentCulture);
+            grayChairTotallbl.Text=grayChairTotal.ToString("C", CultureInfo.CurrentCulture);
 
             GrandTotalLbl.Text = "Grand Total: " + grandTotal.ToString("C", CultureInfo.CurrentCulture);
             AfterTaxTotalLbl.Text = "Total(+TAX): " + afterTaxTotal.ToString("C", CultureInfo.CurrentCulture);
@@ -326,6 +395,15 @@ namespace JOJ_Furniture.Pages
 
                 ComputerDeskQuantity = cookieStringtoNumber(Request.Cookies["computerDeskQuantity"].Value);
                 computerDeskQlbl.Text = Request.Cookies["computerDeskQuantity"].Value;
+
+                grayChairQuantity = Int32.Parse(Request.Cookies["grayChairQuantity"].Value);
+                grayChairQlbl.Text = grayChairQuantity.ToString();
+
+                darkGrayChairQuantity = Int32.Parse(Request.Cookies["darkGrayChairQuantity"].Value);
+                darkGrayChairQlbl.Text = darkGrayChairQuantity.ToString();
+
+                modernChairQuanitity = Int32.Parse(Request.Cookies["modernChairQuantity"].Value);
+                modernChairQlbl.Text = modernChairQuanitity.ToString();
 
                 updateDisplay();
             }

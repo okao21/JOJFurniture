@@ -44,7 +44,7 @@
                         <asp:ListItem Text="4" Value="4"></asp:ListItem>
                         <asp:ListItem Text="5" Value="5"></asp:ListItem>
              </asp:DropDownList>
-            <asp:Button ID="AddtoCartModernChair" runat="server" Text="Add To Cart!" style="text-align:center"/>
+            <asp:Button ID="AddtoCartModernChair" runat="server" Text="Add To Cart!" style="text-align:center" OnClick="addProductToCart"/>
             
         </div>
 
@@ -63,7 +63,7 @@
                         <asp:ListItem Text="4" Value="4"></asp:ListItem>
                         <asp:ListItem Text="5" Value="5"></asp:ListItem>
              </asp:DropDownList>
-            <asp:Button ID="AddtoCartDarkGrayChair" runat="server" Text="Add To Cart!" style="text-align:center"/>
+            <asp:Button ID="AddtoCartDarkGrayChair" runat="server" Text="Add To Cart!" style="text-align:center" OnClick="addProductToCart"/>
                         
         </div>
 
@@ -82,7 +82,7 @@
                         <asp:ListItem Text="4" Value="4"></asp:ListItem>
                         <asp:ListItem Text="5" Value="5"></asp:ListItem>
              </asp:DropDownList>
-            <asp:Button ID="AddtoCartGrayChair" runat="server" Text="Add To Cart!" style="text-align:center" />
+            <asp:Button ID="AddtoCartGrayChair" runat="server" Text="Add To Cart!" style="text-align:center" OnClick="addProductToCart"/>
                         
         </div>
     </div>

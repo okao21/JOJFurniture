@@ -19,7 +19,7 @@
     </ul>
     <ul id="Header2">
         <li class="Header2"><a href="LogOut.aspx" class="HeaderListEntry">Log Out</a></li>
-        <li class="Header2"><a href="Cart.aspx" class="HeaderListEntry">Cart</a></li>
+        <li class="Header2"><a href="Products.aspx" class="HeaderListEntry">Product</a></li>
     </ul>
 
 
@@ -106,6 +106,43 @@
             </td>
             <td>
                 <asp:Label ID="ComputerDeskTotallbl" runat="server" Text="$"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td>Modern Chair</td>
+            <td>$150</td>
+            <td>
+                <asp:Button ID="addMC" runat="server" Text="+" OnClick="addProduct" />
+                <asp:Label ID="modernChairQlbl" runat="server" Text=""></asp:Label>
+                <asp:Button ID="removeMC" runat="server" Text="-" OnClick="removeProduct" />
+            </td>
+            <td>
+                <asp:Label ID="modernChairTotallbl" runat="server" Text="$"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td>Dark Gray Chair</td>
+            <td>$150</td>
+            <td>
+                <asp:Button ID="addDGC" runat="server" Text="+" OnClick="addProduct" />
+                <asp:Label ID="darkGrayChairQlbl" runat="server" Text=""></asp:Label>
+                <asp:Button ID="removeDGC" runat="server" Text="-" OnClick="removeProduct" />
+            </td>
+            <td>
+                <asp:Label ID="darkGrayChairTotallbl" runat="server" Text="$"></asp:Label>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Gray Chair</td>
+            <td>$150</td>
+            <td>
+                <asp:Button ID="addGC" runat="server" Text="+" OnClick="addProduct" />
+                <asp:Label ID="grayChairQlbl" runat="server" Text=""></asp:Label>
+                <asp:Button ID="removeGC" runat="server" Text="-" OnClick="removeProduct" />
+            </td>
+            <td>
+                <asp:Label ID="grayChairTotallbl" runat="server" Text="$"></asp:Label>
             </td>
         </tr>
 

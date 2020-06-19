@@ -97,6 +97,10 @@ namespace JOJ_Furniture.Pages
                         Response.Cookies["coffeeTableQuantity"].Value = "0";
                         Response.Cookies["computerDeskQuantity"].Value = "0";
 
+                        Response.Cookies["modernChairQuantity"].Value = "0";
+                        Response.Cookies["darkGrayChairQuantity"].Value = "0";
+                        Response.Cookies["grayChairQuantity"].Value = "0";
+
                         //Then we can navigate away
                         Response.Redirect("../Pages/Products.aspx");
                     }
