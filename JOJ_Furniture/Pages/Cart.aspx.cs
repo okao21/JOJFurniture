@@ -38,10 +38,6 @@ namespace JOJ_Furniture.Pages
         double grayChairTotal;
         double darkGrayChairTotal;
 
-        int currentOrderID;
-
-        Random rand = new Random();
-
         protected void goToCheckout(object sender, EventArgs e)
         {
             placeOrderLbl.Visible = true;
@@ -125,17 +121,8 @@ namespace JOJ_Furniture.Pages
         }
 
         protected void placeOrder(object sender, EventArgs e)
-        {
-            //generate random Order ID
-            currentOrderID = rand.Next(10000, 100000);
-
-            Response.Cookies["Order ID"].Value = currentOrderID.ToString();
-
-
+        {            
             Response.Redirect("../Pages/Confirm.aspx");
-
-
-
         }
 
         protected void addProduct(object sender, EventArgs e)

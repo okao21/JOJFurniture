@@ -18,7 +18,6 @@ namespace JOJ_Furniture.Pages
                 Response.Redirect("../Pages/Redirect.aspx");
             }
 
-            OrderidLbl.Text = Request.Cookies["Order ID"].Value;
         }
     }
 }

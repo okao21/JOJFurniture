@@ -22,12 +22,7 @@
 
         <h1 id="intro">Success!</h1>
         <br />
-        <h2>We received your order. Your Order ID is:</h2>
-
-        <asp:Label ID="OrderidLbl" runat="server" Text="Label" Font-Size="X-Large" Font-Bold="true"></asp:Label>
-
-
-
+        <h2>We received your order. </h2>
 
     </form>
 </body>
