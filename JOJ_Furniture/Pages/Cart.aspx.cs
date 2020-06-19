@@ -124,7 +124,7 @@ namespace JOJ_Furniture.Pages
             confirmBtn.Visible = false;
         }
 
-        protected void placeOrder(Object sender, EventArgs e)
+        protected void placeOrder(object sender, EventArgs e)
         {
             //generate random Order ID
             currentOrderID = rand.Next(10000, 100000);
@@ -353,18 +353,6 @@ namespace JOJ_Furniture.Pages
             
         }
 
-        private int cookieStringtoNumber(string thisString)
-        {
-            if (string.IsNullOrEmpty(thisString))
-            {
-                return 0;
-            }
-            else
-            {
-                return Int32.Parse(thisString);
-            }
-        }
-
         protected void Page_Load(object sender, EventArgs e)
         {
             string emailAddress;
@@ -378,23 +366,24 @@ namespace JOJ_Furniture.Pages
                 emailAddress = Request.Cookies["email"].Value;
 
 
-                graycouchQuantity = cookieStringtoNumber(Request.Cookies["grayCouchQuantity"].Value);
-                GraySofaQlbl.Text = Request.Cookies["grayCouchQuantity"].Value;
+                graycouchQuantity = Int32.Parse(Request.Cookies["grayCouchQuantity"].Value);
+                GraySofaQlbl.Text = graycouchQuantity.ToString();
 
-                lightGrayCouchQuantity = cookieStringtoNumber(Request.Cookies["lightGrayCouchQuantity"].Value);
-                LightGraySofaQlbl.Text = Request.Cookies["lightGrayCouchQuantity"].Value;
+                lightGrayCouchQuantity = Int32.Parse(Request.Cookies["lightGrayCouchQuantity"].Value);
+                LightGraySofaQlbl.Text = lightGrayCouchQuantity.ToString();
 
-                greenCouchQuantity = cookieStringtoNumber(Request.Cookies["greenCouchQuantity"].Value);
-                GreenSofaQlbl.Text = Request.Cookies["greenCouchQuantity"].Value;
+                greenCouchQuantity = Int32.Parse(Request.Cookies["greenCouchQuantity"].Value);
+                GreenSofaQlbl.Text = greenCouchQuantity.ToString();
 
-                kitchenTableQuantity = cookieStringtoNumber(Request.Cookies["kitchenTableQuantity"].Value);
-                KitchenTableQlbl.Text = Request.Cookies["kitchenTableQuantity"].Value;
-                
-                coffeeTableQuanaity = cookieStringtoNumber(Request.Cookies["coffeeTableQuantity"].Value);
-                coffeeTableQlbl.Text = Request.Cookies["coffeeTableQuantity"].Value;
+                kitchenTableQuantity = Int32.Parse(Request.Cookies["kitchenTableQuantity"].Value);
+                KitchenTableQlbl.Text = kitchenTableQuantity.ToString();
 
-                ComputerDeskQuantity = cookieStringtoNumber(Request.Cookies["computerDeskQuantity"].Value);
-                computerDeskQlbl.Text = Request.Cookies["computerDeskQuantity"].Value;
+
+                coffeeTableQuanaity = Int32.Parse(Request.Cookies["coffeeTableQuantity"].Value);
+                coffeeTableQlbl.Text = coffeeTableQuanaity.ToString();
+
+                ComputerDeskQuantity = Int32.Parse(Request.Cookies["computerDeskQuantity"].Value);
+                computerDeskQlbl.Text = ComputerDeskQuantity.ToString();
 
                 grayChairQuantity = Int32.Parse(Request.Cookies["grayChairQuantity"].Value);
                 grayChairQlbl.Text = grayChairQuantity.ToString();
