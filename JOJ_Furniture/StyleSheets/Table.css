@@ -66,25 +66,23 @@ li a.HeaderListEntry {
 
 ul#Header {
     list-style-type: none;
-    margin: 10;
+    margin: 0;
     padding: 0;
-    overflow: hidden;
     background-color: darkslategray;
-    position: absolute;
+    position: fixed;
     left: 0;
-    top: 0;
+    top: 16px;
     width: 60%;
 }
 
 ul#Header2 {
     list-style-type: none;
-    margin: 10;
+    margin: 0;
     padding: 0;
-    overflow: hidden;
     background-color: darkslategray;
-    position: absolute;
+    position: fixed;
     right: 0;
-    top: 0;
+    top: 16px;
     width: 60%;
 }
 

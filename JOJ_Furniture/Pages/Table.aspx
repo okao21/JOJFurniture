@@ -13,7 +13,7 @@
 
 
     <form id="form4" runat="server">
-        <ul id="Header">
+    <ul id="Header">
         <li class="Header"><a href="Home.aspx" class="HeaderListEntry">Home</a></li>
         <li class="Header"><a href="Login.aspx" class="HeaderListEntry">Login</a></li>
         <li class="Header"><a href="CreateAccount.aspx" class="HeaderListEntry">Create Account</a></li>
