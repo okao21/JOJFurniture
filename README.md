@@ -1,4 +1,4 @@
-# JOJFurniture - A CSTP1303 group project made by Jordan, Tim and me.
+# JOJFurniture - A CSTP1303 group project made by Jordan Norn, Junyoung(Tim) Lee and Oswald Kao
 
 This is a small shopping website.
 
